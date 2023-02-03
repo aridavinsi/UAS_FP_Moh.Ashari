@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block isinya %}
+</section>
+<section id="tampilan">
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>CLIENT SIDE PROGRAMING</h2>
+            <h5>How To Make x CSS Layout, jan 24, 2022</h5>
+            
+            <img src="{% static 'img/layout.png'%}" style="width: 100%; height: 250px;" alt="">
+            <p>Header...</p>
+            <p>Seperti namanya, merupakan elemen yang berisi judul dan penjelasan lain dokumen. Biasanya elemen ini diisikan dengan <br>
+                 logo website, menu-menu global(seperti login dan logout), maupun nama halaman yang sedang ditampilkan.</p>
+        </div>
+        <div class="card">
+            <h2>Client Side Programing</h2>
+            <h5>How To Make x CSS Layout, jan 4, 2022</h5>
+            <img src="{% static 'img/layout1.png'%}" style="width: 100%; height: 300px;" alt="">
+            <p>Layout...</p>
+            <p>Dalam dunia desain, Layout berbicara mengenai bagaimana penataan elemen-elemen dalam sebuah halaman dengan benar, <br>
+                Sama seperti tipografi, terdapat banyak elemen-elemen pada layout yang tentunya tidak akan dapat dibahas pada <br> 
+                bagian ini sendiri. Pembahasan layout secara menyeluruh akan memerlukan bukunya tersendiri. Kita akan hanya melihat <br> 
+                elemen-elemen layout yang umumnya ditemukan pada dokumen web, dan bagaimana membuat elemen-elemen tersebut <br> dengan HTML dan CSS.</p>
+        </div>
+    </div>
+    <div class="rightcolum">
+        <div class="card">
+            <h2>About Me</h2>
+            <img src="{% static 'img/ari.jpeg'%}" style="width: 250px; height: 250;" alt="">
+            <p>a teenage boy, Mahasiswa, Brother.</p>
+        </div>
+        <div class="card">
+            <h3>POPULER POST</h3>
+            <p>Header...</p>
+            <img src="{% static 'img/layout.png'%}" style="width: 200px; height: 100px;" alt="">
+            <p>Layout...</p>
+            <img src="{% static 'img/layout1.png'%}" style="width: 200px; height: 200px;" alt="">
+            <br><br><br>
+            <h3>Quotes Motivasi</h3>
+            <p>"Jika anda berpikir pengguna anda idiot, hanya idiot yang akan menggunakannya."~Linus Torvalds~</p>
+        </div>
+    </div>
+</div>
+</section>
+{% endblock %}

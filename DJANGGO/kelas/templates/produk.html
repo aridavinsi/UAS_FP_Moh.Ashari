@@ -1,0 +1,221 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Halaman | Produk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+    <style>
+        *{box-sizing: border-box;
+        }
+        body{
+            font-family: arial;
+            padding: 10px;
+            background: #f1f1f1;
+            background-image: url("{% static 'img/bg.png'%}");
+        }
+        /* Header/Blog Title */
+        .header{
+            padding: 30px;
+            text-align: center;
+            background: white;
+            background-image: url("{% static 'img/unyil.jpg'%}");
+        }
+        .header h1{
+            font-size: 50px;
+        }
+        /* Style untuk navigation bar */
+        .topnav{
+            overflow: hidden;
+            background-color: #c2bdbd;
+        }
+        /* Style untuk Link di navbar */
+        .topnav a{
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* merubah warna hover */
+        .topnav a:hover{
+            
+            color: rgb(253, 215, 3);
+        }
+        /* untuk mencreate 2 unequel kolom */
+        /* left column */
+        .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+        /* Right column */
+        .rightcolumn{
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+        /* Fake image */
+        .fakeing{
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+        /* memberikan effect card pada konten */
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+        /* Clear floats setelah column */
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+        /* membuat responsible layout-ketika screen dibawah 800px maka membuat 2 kolom saling stack satu sama lain */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /* membuat responsible layout-ketika screen dibawah 400px maka membuat navigation bar saling stack terhadap car */
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <h1>welcome To <br> My Website</h1>
+        <p>Created By Moh Ashari.</p>
+    </div>
+    <section id="menu">
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="contact">Contact</a>
+        <a href="cv.pdf">Download</a>
+        <a href="/">Produk</a>
+        <a href="/Vbrg/">Tabel1</a>
+        <a href="/member/">Tabel 2</a>
+        <a href="/Vbrg02/">Tabel 3</a>
+        <a href="/member02/">Tabel 4</a>
+        <a href="about.html" style="float:right">About Us</a>
+    </div>
+    </section>
+  <section id="isi">
+    <h1 align="center">Produk Kami</h1>
+    <div class="container">
+      <center>
+        <hr style="height:5px;width:75%;color:rgb(63, 144, 138);background-color:rgb(164, 45, 45);">
+      </center>
+      <h2 class="text-center">Produk Terbaru</h2>
+      <div class="card-group">
+        <div class="card" data-aos="fade-up">
+          <img src="{% static 'img/1.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Wanita</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <img src="{% static 'img/3.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pria</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" data-aos="zoom-in-up">
+          <img src="{% static 'img/2.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Anak-anak</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card" data-aos="fade-up">
+          <img src="{% static 'img/4.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Wanita</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <img src="{% static 'img/5.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pria</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" data-aos="zoom-in-up">
+          <img src="{% static 'img/6.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Anak-anak</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card" data-aos="fade-up">
+          <img src="{% static 'img/7.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Wanita</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <img src="{% static 'img/8.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pria</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card" data-aos="zoom-in-up">
+          <img src="{% static 'img/9.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Anak-anak</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+    <nav class="navbar-expand-lg bg-dark text-light">
+        <h6 align="center">Created By Moh Ashari.</h6>
+    </nav>
+  </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

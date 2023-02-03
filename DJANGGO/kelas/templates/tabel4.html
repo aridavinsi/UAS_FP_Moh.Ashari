@@ -1,0 +1,157 @@
+<link href="" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman | {{titel}}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    
+    <style>
+        *{box-sizing: border-box;
+        }
+        body{
+            font-family: arial;
+            padding: 10px;
+            background: #f1f1f1;
+            background-image: url("{% static 'img/bg.png'%}");
+        }
+        /* Header/Blog Title */
+        .header{
+            padding: 30px;
+            text-align: center;
+            background: white;
+            background-image: url("{% static 'img/unyil.jpg'%}");
+        }
+        .header h1{
+            font-size: 50px;
+        }
+        /* Style untuk navigation bar */
+        .topnav{
+            overflow: hidden;
+            background-color: #c2bdbd;
+        }
+        /* Style untuk Link di navbar */
+        .topnav a{
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* merubah warna hover */
+        .topnav a:hover{
+            
+            color: rgb(253, 215, 3);
+        }
+        /* untuk mencreate 2 unequel kolom */
+        /* left column */
+        .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+        /* Right column */
+        .rightcolumn{
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+        /* Fake image */
+        .fakeing{
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+        /* memberikan effect card pada konten */
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+
+        }
+        /* Clear floats setelah column */
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+        /* membuat responsible layout-ketika screen dibawah 800px maka membuat 2 kolom saling stack satu sama lain */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /* membuat responsible layout-ketika screen dibawah 400px maka membuat navigation bar saling stack terhadap car */
+    </style>
+</head>
+<body>  
+    <section id="menu">
+    <div class="header">
+        <h1>welcome To <br> My Website</h1>
+        <p>Created By Moh Ashari.</p>
+    </div>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="cv.pdf">Download</a>
+        <a href="/produk/">Produk</a>
+        <a href="/Vbrg/">Tabel 1</a>
+        <a href="/member/">Tabel 2</a>
+        <a href="/Vbrg02/">Tabel 3</a>
+        <a href="/">Tabel 4</a>
+        <a href="about.html" style="float:right">About Us</a>
+    </div>
+
+<h2 class="align-center" align="center">Daftar Member</h2>
+<p><a href="/addmember02" class="btn btn-primary">Tambah Data</a></p>
+{% for message in messages%}
+        {% if messages %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endif %}
+{% endfor %}
+<table border="1" class="table table-striped" align="center">
+    <tr>
+        <th>ID Member</th>
+        <th>Nama</th>
+    </tr>
+    
+{% for Member in members %}
+    <tr>
+        <td>{{ Member.idmember }}</td>
+        <td>{{ Member.nama }}</td>
+    </tr>
+{% endfor %}
+</table>
+<br><br>
+    
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"
+></script>
+
+<section id="footer">
+    <div class="footer">
+        <div align="center">Copyright 2020 &copy; Moh Ashari.</div>
+    </div>
+    </section>
+</body>
+</html>

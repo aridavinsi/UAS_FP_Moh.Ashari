@@ -1,0 +1,83 @@
+*{box-sizing: border-box;
+}
+body{
+    font-family: arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+/* Header/Blog Title */
+.header{
+    padding: 30px;
+    text-align: center;
+    background: white;
+    background-image: url(./unyil.jpg);
+}
+.header h1{
+    font-size: 50px;
+}
+/* Style untuk navigation bar */
+.topnav{
+    overflow: hidden;
+    background-color: #c2bdbd;
+}
+/* Style untuk Link di navbar */
+.topnav a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* merubah warna hover */
+.topnav a:hover{
+    
+    color: rgb(253, 215, 3);
+}
+/* untuk mencreate 2 unequel kolom */
+/* left column */
+.leftcolumn{
+    float: left;
+    width: 75%;
+}
+/* Right column */
+.rightcolumn{
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+/* Fake image */
+.fakeing{
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+/* memberikan effect card pada konten */
+.card{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+/* Clear floats setelah column */
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Footer */
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+/* membuat responsible layout-ketika screen dibawah 800px maka membuat 2 kolom saling stack satu sama lain */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn{
+        width: 100%;
+        padding: 0;
+    }
+}
+/* membuat responsible layout-ketika screen dibawah 400px maka membuat navigation bar saling stack terhadap car */
